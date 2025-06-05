@@ -1,96 +1,295 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8f9fa;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Mobile Container */
+.mobile-container {
+  width: 375px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background-color: #000000;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 0px;
 }
 
-.card {
-  padding: 2em;
+.icons {
+  display: flex;
+  gap: 3px;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-left: 12px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  vertical-align: middle;
+  transition: opacity 0.2s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.icon:hover {
+  opacity: 0.7;
+}
+
+/* Search Container */
+.search-container {
+  padding: 0 20px;
+  background-color: #000000;
+}
+
+.search-bar {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 0;
+  display: flex;                /* flex로 변경 */
+  align-items: center;          /* 세로 중앙 정렬 */
+  justify-content: space-between;
+}
+
+.search-placeholder {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  gap: 0;
+  padding: 16px 20px 0 16px;
+  background-color: #000000;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tab-item {
+  font-size: 14px;
+  font-weight: 400;
+  color: #808080;
+  cursor: pointer;
+  padding: 0 0 8px 0;
+  margin-right: 20px;
+  transition: color 0.2s ease;
+}
+
+.tab-item.active {
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 2px solid #ffffff;
+}
+
+.tab-item:hover:not(.active) {
+  color: #555555;
+}
+
+/* Weather Info */
+.weather-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #f7faff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 20px 20px 20px;
+  min-height: 90px;
+  position: relative;
+}
+
+.weather-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 90px;
+}
+
+.weather-today {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.city-name {
+  font-size: 13px;
+  color: #4d4d4d;
+  font-weight: 400;
+}
+
+.weather-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.weather-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.weather-icon {
+  font-size: 18px;
+}
+
+.current-temp {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.temperature {
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+  padding: 0 20px 30px 20px;
+}
+
+/* Model Section */
+.model-section {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.model-image {
+  width: 200px;
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  position: relative;
+}
+
+.navigation-arrows {
+  display: flex;
+  flex-direction: row;      /* 가로로 화살표 배치 */
+  gap: 0;                   /* 버튼끼리 붙여서 한 쪽만 나오게 */
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.product-item {
+  width: 44px;
+  height: 66px;
+  background-color: #e6e6e6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Coordination Section */
+.coord-section {
+  text-align: left;
+}
+
+.coord-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.coord-description {
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .mobile-container {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
   }
-  a:hover {
-    color: #747bff;
+  
+  body {
+      padding: 0;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
   }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.mobile-container {
+  animation: fadeIn 0.5s ease-out;
 }

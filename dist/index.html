@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSINSA - 날씨 탭</title>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KN87VYS7G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3KN87VYS7G');
+</script>
+  <script type="module" crossorigin src="/assets/index-Bar3hi4O.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C9bZ2Yb9.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">MUSINSA</div>
+            <div class="icons">
+              <img class="icon" src="free-icon-font-bell.png" alt="알림" />
+              <img class="icon" src="free-icon-font-shopping-bag.png" alt="장바구니" />
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <span class="search-placeholder">990딜, 선착순 구매 찬스</span>
+                <img class="icon2" src="free-icon-font-search.png" alt="돋보기" />
+            </div>
+        </div>
+
+        <!-- Tab Navigation (sticky) -->
+        <nav class="tab-navigation">
+            <span class="tab-item">콘텐츠</span>
+            <span class="tab-item active">날씨</span>
+            <span class="tab-item">추천</span>
+            <span class="tab-item">랭킹</span>
+            <span class="tab-item">세일</span>
+            <span class="tab-item">브랜드</span>
+        </nav>
+
+        <!-- Scroll Area -->
+        <div class="scroll-area">
+            <!-- Weather Info -->
+            <div class="weather-info">
+              <div class="weather-left">
+                <div class="weather-today">Today</div>
+                <div class="city-name">서울시 강남구</div>
+              </div>
+              <div class="weather-right">
+                <div class="weather-row">
+                  <span class="weather-icon">☀️</span><span class="current-temp">27°</span>
+                </div>
+                <div class="temperature">18° / 23°</div>
+              </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Model Image Section -->
+                <div class="model-section">
+                  <div class="navigation-arrows">
+                    <button class="arrow-btn left">◀</button>
+                  </div>
+                  <div class="model-image"></div>
+                  <div class="navigation-arrows">
+                    <button class="arrow-btn right">▶</button>
+                  </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid">
+                    <div class="product-item"></div>
+                    <div class="product-item"></div>
+                    <div class="product-item"></div>
+                    <div class="product-item"></div>
+                </div>
+
+                <!-- Coordination Section -->
+                <div class="coord-section">
+                    <h2 class="coord-title">오늘의 코디</h2>
+                    <p class="coord-description">
+                        햇빛이 쨍쨍한 오늘, 레이스와 핑크 팬츠로 사랑스럽게.<br>
+                        가디건과 볼캡으로 자외선을 막는 건 물론, 캐주얼한 포인트까지 더해보자.
+                    </p>
+                </div>
+            </main>
+            <!-- Action Buttons Section: scroll-area의 마지막에 위치 -->
+            <div class="action-buttons-section">
+                <button class="action-btn like-btn" type="button">
+                    <img src="/9041831_heart_icon.png" alt="좋아요" class="action-icon large-icon" data-white="/9041831_heart_icon.png" data-black="/9023548_heart_fill_icon.png" />
+                    <span class="count like-count">0</span>
+                </button>
+                <button class="action-btn" type="button">
+                    <img src="/9041963_speech_bubble_icon.png" alt="댓글" class="action-icon large-icon" />
+                    <span class="count comment-count">0</span>
+                </button>
+                <button class="action-btn" type="button">
+                    <img src="/share_1657634.png" alt="공유" class="action-icon" />
+                    <span class="count share-count">0</span>
+                </button>
+                <button class="action-btn bookmark-btn" type="button">
+                    <img src="/store.png" alt="저장" class="action-icon" data-white="/store.png" data-black="/store2.png" />
+                    <span class="count bookmark-count">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+    const grid = document.querySelector('.product-grid');
+    if (grid) {
+      grid.addEventListener('click', function(e) {
+        const item = e.target.closest('.product-item');
+        if (item) {
+          const productId = item.dataset.productId || '';
+          const productName = item.dataset.productName || '';
+          sendGA4Event('click_productImage', {
+            product_id: productId,
+            product_name: productName
+          });
+        }
+      });
+    }
+    </script>
+</body>
+</html>

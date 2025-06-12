@@ -24,10 +24,10 @@
 ## 3. 실제 데이터 수집 확인 스크린샷  
 
 ### 📸 Real-time Overview 1  
-![실시간 이벤트 개요 1](./public/Real-time_overview1.png)
+![실시간 이벤트 개요 1](../public/Real-time_overview1.PNG)
 
 ### 📸 Real-time Overview 2  
-![실시간 이벤트 개요 2](./public/Real-time_overview2.png)
+![실시간 이벤트 개요 2](../public/Real-time_overview2.PNG)
 
 ---
 

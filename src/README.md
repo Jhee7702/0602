@@ -34,7 +34,7 @@
 ## 4. 배포된 웹 링크  
 
 👉 [https://extraordinary-jelly-9ed4c1.netlify.app](https://extraordinary-jelly-9ed4c1.netlify.app)  
-_(Netlify에서 실제 배포 후 생성된 주소로 교체해주세요)_
+
 
 ---
 

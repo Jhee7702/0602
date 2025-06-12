@@ -37,24 +37,45 @@ export function getMockWeatherData() {
       weather_tag: 'cloudy',
       temp_min: 22,
       temp_max: 28,
+      current_temp: 25,
       emoji: '☁',
-      desc: '흐린 날씨엔 가벼운 셔츠와 슬랙스로 쾌적하게.'
+      desc: '흐리고 후덥지근한 날씨엔, 체감 온도를 낮춰주는 통기성 좋은 소재가 정답.\n시어서커 셔츠에 버뮤다팬츠 매치로 가볍고 시원한 하루를 보내자.',
+      likeCount: 0,
+      commentCount: 0,
+      shareCount: 0,
+      saveCount: 0,
+      likeTotalCount: 0,
+      saveTotalCount: 0
     },
     {
       dateLabel: '오늘',
       weather_tag: 'sunny',
       temp_min: 25,
       temp_max: 31,
+      current_temp: 29,
       emoji: '☀',
-      desc: '해가 쨍쨍한 오늘, 밝은톤 시어서커 셔츠와 조리 슬리퍼로 산뜻하게.'
+      desc: '햇빛이 쨍쨍한 오늘, 레이스와 핑크 팬츠로 사랑스럽게.\n가디건과 볼캡으로 자외선을 막는 건 물론, 캐주얼한 포인트까지 더해보자.',
+      likeCount: 0,
+      commentCount: 0,
+      shareCount: 0,
+      saveCount: 0,
+      likeTotalCount: 0,
+      saveTotalCount: 0
     },
     {
       dateLabel: '내일',
       weather_tag: 'rainy',
       temp_min: 23,
       temp_max: 27,
+      current_temp: 24,
       emoji: '🌧',
-      desc: '소나기 예보엔 가벼운 바람막이와 레인슈즈로 대비하세요.'
+      desc: '비 오는 날엔, 레인부츠와 러플 스커트로 실용적인 코디 완성.\n레드 탑과 도트 백을 매치해 스타일 포인트까지 확실하게 챙기자.',
+      likeCount: 0,
+      commentCount: 0,
+      shareCount: 0,
+      saveCount: 0,
+      likeTotalCount: 0,
+      saveTotalCount: 0
     }
   ];
 }
